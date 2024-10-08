@@ -285,6 +285,6 @@ function setupLogout() {
     logoutLink.addEventListener("click", (e) => {
         e.preventDefault();
         localStorage.removeItem("loggedUser");
-        window.location.href = "/index.html";
+        window.location.href = "index.html";
     });
 }
