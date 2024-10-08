@@ -61,7 +61,7 @@ loginBtn.addEventListener("click", function (e) {
     const loggedUser = users.find(user => user.emailProperty === email);
     localStorage.setItem("loggedUser", JSON.stringify(loggedUser));
 
-    window.location.href = '/home.html';
+    window.location.href = 'home.html';
 });
 
 // Blur event listeners for validation
