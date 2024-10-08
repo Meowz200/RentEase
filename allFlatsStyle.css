@@ -1,0 +1,562 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+    background-color: #e6f6fb;
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+    flex-direction: column;
+}
+
+/* Header Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #0e4166;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    transition: height 0.3s ease;
+    max-width: 50vw;
+}
+
+.user-section {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.greeting {
+    color: #ffffff;
+    margin-right: 20px;
+    font-weight: 600;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    min-width: 150px;
+    z-index: 1002;
+}
+
+.dropdown-menu a,
+.dropdown-menu .theme-toggle {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #0e4166;
+    cursor: pointer;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.theme-toggle label {
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+/* Show dropdown when active */
+.dropdown-menu.active {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sidebar Filters */
+.sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 20%;
+    height: calc(100% - 60px);
+    background-color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.filters h3 {
+    margin-bottom: 15px;
+    color: #0e4166;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #0e4166;
+}
+
+.filter-group input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 5px;
+    border: 1px solid #4e94f0;
+    border-radius: 4px;
+}
+
+.filter-button {
+    padding: 17px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: #4e94f0;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+}
+
+.filter-button:hover {
+    letter-spacing: 3px;
+    background-color: #0e4166;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #0e4166 0px 7px 29px 0px;
+}
+
+.filter-button:active {
+    letter-spacing: 3px;
+    background-color: #74d3fb;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #74d3fb 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+/* Header Container for Title and Button */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* All Flats Title Styling */
+.all-title {
+    font-size: 2rem;
+    color: #0e4166;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 0.15rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* New Apartment Button Styling */
+.addNew {
+    padding: 17px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: #4e94f0;
+    box-shadow: #0000000d 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.addNew:hover {
+    letter-spacing: 3px;
+    background-color: #0e4166;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #0e4166 0px 7px 29px 0px;
+}
+
+.addNew:active {
+    letter-spacing: 3px;
+    background-color: #74d3fb;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #74d3fb 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+/* Remove Button Styling */
+.add-button {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: #f04e4e;
+    box-shadow: #f04e4e 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+}
+
+.add-button:hover {
+    letter-spacing: 3px;
+    background-color: #f04e4e;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #f04e4e 0px 7px 29px 0px;
+}
+
+.add-button:active {
+    letter-spacing: 3px;
+    background-color: #f04e4e;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #f04e4e 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+/* Favorites List Title */
+.all-title {
+    font-size: 2rem;
+    color: #0e4166;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 0.15rem;
+}
+
+/* Main Content */
+.content {
+    margin-left: 250px;
+    padding: 80px 20px 20px 20px;
+    width: calc(100% - 250px);
+    overflow-y: auto;
+    height: calc(100vh - 60px);
+}
+
+.house-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* House Card */
+.house-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.house-card:hover {
+    transform: translateY(-5px);
+}
+
+.house-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.house-details {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.house-title {
+    font-size: 18px;
+    color: #0e4166;
+    margin-bottom: 10px;
+}
+
+.house-description {
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 10px;
+}
+
+.house-size,
+.house-price {
+    font-size: 14px;
+    color: #0e4166;
+}
+
+/* Responsive Logo */
+@media (max-width: 1024px) {
+    .logo img {
+        height: 35px;
+    }
+    .sidebar {
+        width: 25%;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        height: 30px;
+    }
+    .sidebar {
+        width: 33%;
+    }
+    .content {
+        margin-left: 16rem;
+    }
+}
+
+/*Mobile*/
+@media (max-width: 480px) {
+    .logo img {
+        height: 25px;
+    }
+
+    .navbar {
+        padding: 0 10px;
+    }
+
+    .user-section {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .greeting {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .house-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-gap: 10px;
+    }
+
+    .all-title {
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .addNew {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    .sidebar {
+        width: 100%;
+        position: static;
+        margin-bottom: 20px;
+    }
+}
+
+/*Tablets*/
+@media (min-width: 481px) and (max-width: 768px) {
+    .sidebar {
+        width: 150px;
+    }
+
+    .content {
+        margin-left: 150px;
+    }
+
+    .house-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+}
+
+/*Desktop*/
+@media (min-width: 767px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .content {
+        margin-left: 200px;
+    }
+
+    .house-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+
+/* SVG Positioning */
+.svgDown {
+    position: fixed;
+    bottom: 0;
+    top: 82%;
+    left: 0;
+    width: 100%;
+    height: 35%;
+    z-index: -3;
+    scale: 1;
+}
+
+/* Dark Theme */
+.dark-theme {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.dark-theme .navbar {
+    background-color: #333333;
+}
+
+.dark-theme .sidebar {
+    background-color: #2c2c2c;
+}
+
+.dark-theme .filters h3,
+.dark-theme .filter-group label {
+    color: #ffffff;
+}
+
+.dark-theme .filter-group input {
+    background-color: #444444;
+    color: #ffffff;
+    border: 1px solid #666666;
+}
+
+.dark-theme .filter-button {
+    background-color: #555555;
+}
+.dark-theme .add-button {
+    background-color: #555555;
+}
+.dark-theme .addNew {
+    background-color: #555555;
+}
+
+.dark-theme .filter-button:hover {
+    background-color: #777777;
+}
+.dark-theme .add-button:hover {
+    background-color: #777777;
+}
+.dark-theme .addNew:hover {
+    background-color: #777777;
+}
+
+.dark-theme .house-card {
+    background-color: #2c2c2c;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .house-details {
+    color: #ffffff;
+}
+
+.dark-theme .house-description {
+    color: #dddddd;
+}
+
+.dark-theme .house-price,
+.dark-theme .house-size {
+    color: #ffffff;
+}
+
+.dark-theme .dropdown-menu {
+    background-color: #333333;
+}
+
+.dark-theme .dropdown-menu a {
+    color: #ffffff;
+}
+
+.dark-theme .dropdown-menu a:hover {
+    background-color: #444444;
+}
+
+.dark-theme .theme-toggle label {
+    color: #ffffff;
+}
+.remove-button {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: #f04e4e;
+    box-shadow: #f04e4e 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+}
+
+.remove-button:hover {
+    letter-spacing: 3px;
+    background-color: #f04e4e;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #f04e4e 0px 7px 29px 0px;
+}
+
+.remove-button:active {
+    letter-spacing: 3px;
+    background-color: #f04e4e;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #f04e4e 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}

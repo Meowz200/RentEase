@@ -1,0 +1,27 @@
+#inactivityPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+#inactivityPopup h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#inactivityPopup p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+#countdown {
+    font-size: 24px;
+    color: #e74c3c;
+}
