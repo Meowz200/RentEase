@@ -91,7 +91,7 @@ function hideWarningPopup() {
 function logOutUser() {
     alert("You have been logged out due to inactivity.");
     localStorage.removeItem('loggedUser');
-    window.location.href = "/index.html";
+    window.location.href = "index.html";
 }
 
 // Initialize the inactivity tracker when the page loads
