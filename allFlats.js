@@ -93,7 +93,7 @@ function createHouseCard(apartment, index) {
     houseCard.classList.add("house-card");
 
     const houseImage = document.createElement("img");
-    houseImage.src = apartment.image || "/Images/png/download.jpg";
+    houseImage.src = apartment.image || "Images/png/download.jpg";
     houseImage.alt = "House Image";
     houseImage.classList.add("house-image");
     houseCard.appendChild(houseImage);
