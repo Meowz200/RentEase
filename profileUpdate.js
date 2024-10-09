@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             alert("Profile updated successfully!");
 
-            window.location.href = '/index.html';
+            window.location.href = 'index.html';
         } else {
             console.error("User not found in users array.");
             alert("User not found.");
