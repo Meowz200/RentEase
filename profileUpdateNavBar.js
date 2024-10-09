@@ -48,5 +48,5 @@ document.addEventListener("click", (e) => {
 // Logout functionality
 logoutButton.addEventListener("click", () => {
     localStorage.removeItem("loggedUser");
-    window.location.href = "/index.html";
+    window.location.href = "index.html";
 });
