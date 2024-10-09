@@ -82,7 +82,7 @@ deleteUserButton.addEventListener("click", () => {
             localStorage.removeItem("loggedUser");
 
             alert("Your account has been deleted.");
-            window.location.href = "/index.html";
+            window.location.href = "index.html";
         } else {
             alert("User not found in the system.");
         }
