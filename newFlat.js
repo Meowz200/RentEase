@@ -334,7 +334,7 @@ function setupLogout() {
             }
 
             localStorage.removeItem('loggedUser');
-            window.location.href = "/index.html";
+            window.location.href = "index.html";
         }
     });
 }
